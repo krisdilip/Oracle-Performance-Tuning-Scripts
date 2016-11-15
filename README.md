@@ -14,8 +14,8 @@
   3) Grantees of AWR_USER <br>
     ```GRANT AWR_USER TO <username>; ```		
 		
-  4) Check the role details
-	```SELECT * from ROLE_TAB_PRIVS where role = 'AWR_USER'```
+  4) Check the role details <br>
+     ```SELECT * from ROLE_TAB_PRIVS where role = 'AWR_USER' ```  
 	  		
 |GRANTEE  | OWNER  | TABLE_NAME                 | PRIVILEGE |
 |---------| -------| ---------------------------| ----------|
