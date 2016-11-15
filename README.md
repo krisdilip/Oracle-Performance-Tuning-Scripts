@@ -25,18 +25,5 @@
 |AWR_USER | SYS    | V_$DATABASE                | SELECT    |
 |AWR_USER | SYS    | V_$INSTANCE                | SELECT    |
 
-   5) Generate **AWR** Report
-        
-        a) Switch to the required schema (Optional if you have logged into the correct schema) 
-     ALTER SESSION SET CURRENT_SCHEMA = <USERNAME>;
-	   
-        b) Set role AWR_USER
-             SET ROLE AWR_USER;
-
-        c) Find the snap and Database details
-             SELECT DBID, INSTANCE_NUMBER, SNAP_ID, BEGIN_INTERVAL_TIME, END_INTERVAL_TIME
-	     FROM DBA_HIST_SNAPSHOT ORDER BY BEGIN_INTERVAL_TIME DESC;
-
-        d) Generate the AWR report in HTML format for the above selected snap
-	     SELECT * 
-	     FROM TABLE(DBMS_WORKLOAD_REPOSITORY.AWR_REPORT_HTML(<DBID>, <INSTANCE_NUMBER>, <SNAP_ID FROM>, <SNAP_ID TO>));
+5) Generate **AWR** Report
+  a) Switch schema (this step can be avoided if already in proper
