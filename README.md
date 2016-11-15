@@ -11,6 +11,16 @@
      ```GRANT SELECT ON V_$DATABASE TO AWR_USER;```     
      ```GRANT SELECT ON V_$INSTANCE TO AWR_USER; ```
      
-  3) Grantees of AWR_USER  
-     ```GRANT AWR_USER TO <username>;```
-     
+  3) Grantees of AWR_USER <br>
+    ```GRANT AWR_USER TO <username>; ```		
+		
+  4) Check the role details
+	```SELECT * from ROLE_TAB_PRIVS where role = 'AWR_USER'```
+	  		
+|GRANTEE  | OWNER  | TABLE_NAME                 | PRIVILEGE |
+|---------| -------| ---------------------------| ----------|
+|AWR_USER | SYS    | DBA_HIST_DATABASE_INSTANCE | SELECT    |
+|AWR_USER | SYS    | DBA_HIST_SNAPSHOT          | SELECT    |
+|AWR_USER | SYS    | DBMS_WORKLOAD_REPOSITORY   | EXECUTE   |
+|AWR_USER | SYS    | V_$DATABASE                | SELECT    |
+|AWR_USER | SYS    | V_$INSTANCE                | SELECT    |
