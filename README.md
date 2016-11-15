@@ -10,3 +10,7 @@
      ```GRANT EXECUTE ON DBMS_WORKLOAD_REPOSITORY TO AWR_USER;```     
      ```GRANT SELECT ON V_$DATABASE TO AWR_USER;```     
      ```GRANT SELECT ON V_$INSTANCE TO AWR_USER; ```
+     
+  3) Grantees of AWR_USER  
+     ```GRANT AWR_USER TO <username>;```
+     
