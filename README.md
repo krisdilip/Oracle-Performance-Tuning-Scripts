@@ -26,4 +26,12 @@
 |AWR_USER | SYS    | V_$INSTANCE                | SELECT    |
 
 5) Generate **AWR** Report
-  a) Switch schema (this step can be avoided if already in proper
+* Switch schema<br>
+        ```ALTER SESSION SET CURRENT_SCHEMA = <USERNAME>;```
+* Set role AWR_USER<br>
+	```SET ROLE AWR_USER;```
+* Find the snap Id's and Database details<br>
+```
+SELECT DBID, INSTANCE_NUMBER, SNAP_ID, BEGIN_INTERVAL_TIME, END_INTERVAL_TIME 
+FROM DBA_HIST_SNAPSHOT ORDER BY BEGIN_INTERVAL_TIME DESC;
+```
