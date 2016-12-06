@@ -36,4 +36,6 @@ SELECT DBID, INSTANCE_NUMBER, SNAP_ID, BEGIN_INTERVAL_TIME, END_INTERVAL_TIME
 FROM DBA_HIST_SNAPSHOT ORDER BY BEGIN_INTERVAL_TIME DESC;
 ```
 * Genarate AWR report
-	
+
+	``` select * from table(dbms_workload_repository.awr_report_html(1517154765, 1, 211, 212));
+	```
