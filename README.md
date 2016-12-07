@@ -38,7 +38,7 @@
 
  * Set role AWR_USER
  
-         SET ROLE AWR_USER;
+          SET ROLE AWR_USER;
 	
  * Find the snap Id's and Database details
  
