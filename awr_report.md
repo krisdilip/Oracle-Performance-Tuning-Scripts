@@ -1,9 +1,9 @@
-### AWR - Report generation
+### Prerequisites for AWR generation
 1. Create a new role and give the following grants to the role
 
         CREATE ROLE AWR_USER NOT IDENTIFIED;
      
-2. Object privileges granted to AWR_USER    
+2. Grant the below priviledges to AWR_USER    
      
         GRANT SELECT ON DBA_HIST_DATABASE_INSTANCE TO AWR_USER;
         GRANT SELECT ON DBA_HIST_SNAPSHOT TO AWR_USER;
@@ -11,7 +11,7 @@
         GRANT SELECT ON V_$DATABASE TO AWR_USER;
         GRANT SELECT ON V_$INSTANCE TO AWR_USER;
 			
-3. Grantees of AWR_USER 
+3. Grant the AWR_USER role to user's
 
         GRANT AWR_USER TO <username>;		
 		
@@ -28,8 +28,8 @@
  |AWR_USER | SYS    | V_$DATABASE                | SELECT    |
  |AWR_USER | SYS    | V_$INSTANCE                | SELECT    |
       
-
-5. Generate **AWR** Report
+### AWR - Report generation
+1. Steps for AWR generation
  * Switch schema
  
           ALTER SESSION SET CURRENT_SCHEMA = <USERNAME>;
