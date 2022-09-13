@@ -5,4 +5,5 @@
 3. [SQL - Plan history](sql_plan_history.md)
 4. [SQL - Profile](sql_profile.md)
 5. [Policies](policies.md)
+6. [Tablespace - Usage](tablespace-usage.md)
 
